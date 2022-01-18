@@ -20,7 +20,10 @@ int main(int argc, char *argv[])
         else
             wielk_wynik = (w+1)*k/4;
     else
-        wielk_wynik = w*k/4;
+        if (k%2!=0)
+            wielk_wynik = w*(k+1)/4;
+        else
+            wielk_wynik = w*k/4;
     int wynik[wielk_wynik];
     int *c;
     c = wektor_parzysty(w, k, tab);
